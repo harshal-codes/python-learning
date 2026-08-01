@@ -1,0 +1,600 @@
+# Python Quick Notes (Variables to String Functions)
+
+> **Perfect for 10–15 minute revision before interviews or coding tests.**
+
+---
+
+# 1. Variables
+
+## Definition
+
+A variable is a named memory location used to store data.
+
+```python
+name = "Harshal"
+age = 21
+cgpa = 8.85
+```
+
+### Rules
+
+* Start with a letter or `_`
+* Cannot start with a number
+* No spaces
+* No keywords
+* Case-sensitive (`age` ≠ `Age`)
+
+### Dynamic Typing
+
+```python
+x = 10
+x = "Hello"
+```
+
+Python automatically changes the data type.
+
+---
+
+# 2. Data Types
+
+| Data Type | Example         |
+| --------- | --------------- |
+| int       | `10`            |
+| float     | `10.5`          |
+| str       | `"Python"`      |
+| bool      | `True`, `False` |
+| NoneType  | `None`          |
+
+Check data type:
+
+```python
+print(type(10))
+```
+
+Output
+
+```
+<class 'int'>
+```
+
+---
+
+# 3. Input Function
+
+Takes input from the user.
+
+```python
+name = input("Enter name: ")
+```
+
+### Important
+
+`input()` **always returns a string**.
+
+```python
+age = input()
+```
+
+Input
+
+```
+21
+```
+
+Actually stores
+
+```python
+"21"
+```
+
+---
+
+# 4. Type Conversion (Type Casting)
+
+Convert one data type into another.
+
+```python
+int("25")
+float("3.14")
+str(100)
+bool(1)
+```
+
+Example
+
+```python
+age = int(input("Enter age: "))
+```
+
+### Implicit Type Conversion
+
+```python
+10 + 5.5
+```
+
+Output
+
+```
+15.5
+```
+
+Python automatically converts `10` into `10.0`.
+
+---
+
+# 5. Operators
+
+## Arithmetic Operators
+
+| Operator | Meaning        |
+| -------- | -------------- |
+| +        | Addition       |
+| -        | Subtraction    |
+| *        | Multiplication |
+| /        | Division       |
+| //       | Floor Division |
+| %        | Modulus        |
+| **       | Power          |
+
+Example
+
+```python
+10 / 3
+```
+
+```
+3.3333
+```
+
+```python
+10 // 3
+```
+
+```
+3
+```
+
+```python
+10 % 3
+```
+
+```
+1
+```
+
+```python
+2 ** 5
+```
+
+```
+32
+```
+
+---
+
+## Comparison Operators
+
+```
+==
+!=
+>
+<
+>=
+<=
+```
+
+Return
+
+```
+True
+False
+```
+
+---
+
+## Assignment Operators
+
+```
+=
++=
+-=
+*=
+/=
+%=
+```
+
+Example
+
+```python
+a = 10
+a += 5
+```
+
+Result
+
+```
+15
+```
+
+---
+
+## Logical Operators
+
+```
+and
+or
+not
+```
+
+Example
+
+```python
+True and False
+```
+
+Output
+
+```
+False
+```
+
+---
+
+# 6. Strings
+
+A string is a sequence of characters.
+
+```python
+name = "Harshal"
+```
+
+### String Creation
+
+```python
+"Hello"
+'Hello'
+'''Hello'''
+```
+
+---
+
+## Escape Characters
+
+```
+\n
+\t
+\\
+\"
+\'
+```
+
+Example
+
+```python
+print("Hello\nWorld")
+```
+
+Output
+
+```
+Hello
+World
+```
+
+---
+
+## String Concatenation
+
+```python
+first = "Harshal"
+last = "Pawar"
+
+print(first + " " + last)
+```
+
+---
+
+## Length
+
+```python
+len("Python")
+```
+
+Output
+
+```
+6
+```
+
+---
+
+# 7. String Indexing
+
+Each character has an index.
+
+```
+Python
+012345
+```
+
+Negative Index
+
+```
+Python
+-6 -5 -4 -3 -2 -1
+```
+
+Example
+
+```python
+name = "Python"
+
+print(name[0])
+```
+
+Output
+
+```
+P
+```
+
+---
+
+# 8. String Slicing
+
+Syntax
+
+```python
+string[start:end]
+```
+
+End index is **excluded**.
+
+Examples
+
+```python
+name = "Python"
+
+name[0:3]
+```
+
+Output
+
+```
+Pyt
+```
+
+```python
+name[:4]
+```
+
+```
+Pyth
+```
+
+```python
+name[2:]
+```
+
+```
+thon
+```
+
+```python
+name[-3:]
+```
+
+```
+hon
+```
+
+---
+
+# 9. String Functions
+
+### Upper
+
+```python
+name.upper()
+```
+
+---
+
+### Lower
+
+```python
+name.lower()
+```
+
+---
+
+### Capitalize
+
+```python
+name.capitalize()
+```
+
+---
+
+### Title
+
+```python
+name.title()
+```
+
+---
+
+### Replace
+
+```python
+name.replace("P","J")
+```
+
+---
+
+### Find
+
+```python
+name.find("th")
+```
+
+Returns first index.
+
+---
+
+### Count
+
+```python
+name.count("o")
+```
+
+---
+
+### Endswith
+
+```python
+name.endswith("on")
+```
+
+---
+
+### Startswith
+
+```python
+name.startswith("Py")
+```
+
+---
+
+### Strip
+
+```python
+text.strip()
+```
+
+Removes spaces from both ends.
+
+---
+
+# 10. Conditional Statements
+
+## if
+
+```python
+age = 20
+
+if age >= 18:
+    print("Adult")
+```
+
+---
+
+## if-else
+
+```python
+if marks >= 40:
+    print("Pass")
+else:
+    print("Fail")
+```
+
+---
+
+## if-elif-else
+
+```python
+if marks >= 90:
+    print("A")
+elif marks >= 80:
+    print("B")
+elif marks >= 70:
+    print("C")
+else:
+    print("Fail")
+```
+
+---
+
+## Nested if
+
+```python
+age = 65
+
+if age >= 18:
+    if age >= 60:
+        print("Senior Citizen")
+```
+
+---
+
+## Indentation
+
+Python uses indentation instead of `{}`.
+
+Correct
+
+```python
+if True:
+    print("Hello")
+```
+
+Wrong
+
+```python
+if True:
+print("Hello")
+```
+
+---
+
+# Frequently Asked Interview Questions
+
+### Q1. What is a variable?
+
+A named memory location used to store data.
+
+### Q2. What are Python's basic data types?
+
+* int
+* float
+* str
+* bool
+* NoneType
+
+### Q3. What does `input()` return?
+
+Always a **string**.
+
+### Q4. Difference between `/` and `//`?
+
+```
+/  → Float Division
+// → Floor Division
+```
+
+### Q5. Difference between `=` and `==`?
+
+```
+=   Assignment
+==  Comparison
+```
+
+### Q6. Difference between `find()` and `count()`?
+
+```
+find()  → Returns index
+count() → Returns occurrences
+```
+
+### Q7. Difference between indexing and slicing?
+
+```
+Indexing → One character
+Slicing  → Multiple characters
+```
+
+### Q8. What is dynamic typing?
+
+Python automatically determines the variable's data type, and a variable can later hold a different type.
+
+---
