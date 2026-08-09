@@ -598,3 +598,5 @@ Slicing  → Multiple characters
 Python automatically determines the variable's data type, and a variable can later hold a different type.
 
 ---
+list
+
