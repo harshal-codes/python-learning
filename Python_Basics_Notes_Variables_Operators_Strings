@@ -598,5 +598,15 @@ Slicing  → Multiple characters
 Python automatically determines the variable's data type, and a variable can later hold a different type.
 
 ---
-list
+Recursion
+Recursion means a function calling itself.
+Every recursive function needs a Base Case to stop.
+The Recursive Case is where the function calls itself.
+The recursive call should move toward the Base Case.
+Without a Base Case, recursion can run forever.
+Example: countdown(n) can call countdown(n-1).
+Recursion breaks a big problem into smaller versions of the same problem.
+Python uses the call stack to keep track of recursive function calls.
+When the Base Case is reached, functions start returning back upward.
+Remember: Base Case + Smaller Problem + Recursive Call = Recursion.
 
